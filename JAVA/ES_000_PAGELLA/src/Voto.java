@@ -1,5 +1,4 @@
 public class Voto {
-
     private Data giorno;
     private float voto;
     private float peso;
