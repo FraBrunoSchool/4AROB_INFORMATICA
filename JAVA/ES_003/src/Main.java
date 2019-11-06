@@ -9,7 +9,7 @@ public class Main {
         numClassi = new int[nClassi];
         //System.out.println(numClassi.length);
         for (int i = 0; i < nClassi; i++) {
-            numClassi[i]= (int)((Math.random()*10)+1);
+            numClassi[i]= (int)(random.nextInt(30)+1);
             //System.out.println(numClassi[i]);
         }
         for (int i = 0; i < nClassi; i++) {
