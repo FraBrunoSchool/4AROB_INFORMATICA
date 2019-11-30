@@ -1,18 +1,18 @@
 /*
-Si scriva una classe Lavoratore le cui istanze rappresentano lavoratori. Ogni lavoratore è caratterizzato da un
-nome, un livello ed uno stipendio (mensile). La classe deve contenere una variabile di istanza di tipo stringa
-nome e due variabili di istanza intere, livello e stipendio, un costruttore che assegna al lavoratore un nome ed
-un livello specificati, ed un metodo stampaStipendio() che stampa lo stipendio del lavoratore.
-Scrivere quindi una classe LavoratoreConStraordinariPagati che estende la classe Lavoratore. La classe deve
-contenere una nuova variabile di istanza, oreStraordinario, un costruttore che assegna al lavoratore con
-straordinari pagati un nome, un livello e un numero di ore di straordinario specificati, un metodo
-stampaStraordinari() che stampa un messaggio contenente il numero di ore di straordinario. La classe deve
-inoltre contenere una variabile statica reale retribuzioneOraria, inizializzata a 10.0, corrispondente alla
-retribuzione di un'ora di straordinario (che si suppone uguale per tutti). La classe deve inoltre ridefinire il
-metodo stampaStipendio() per tenere conto della retribuzione delle ore di straordinario: alla retribuzione base
-(ereditata da Lavoratore) va sommata la retribuzione degli straordinari, ottenuta come retribuzione oraria dello
-straordinario per numero di ore di straordinario effettuate. Scrivere infine un programma di prova per
-collaudare le classi e i metodi.
+    Si scriva una classe Lavoratore le cui istanze rappresentano lavoratori. Ogni lavoratore è caratterizzato da un
+    nome, un livello ed uno stipendio (mensile). La classe deve contenere una variabile di istanza di tipo stringa
+    nome e due variabili di istanza intere, livello e stipendio, un costruttore che assegna al lavoratore un nome ed
+    un livello specificati, ed un metodo stampaStipendio() che stampa lo stipendio del lavoratore.
+    Scrivere quindi una classe LavoratoreConStraordinariPagati che estende la classe Lavoratore. La classe deve
+    contenere una nuova variabile di istanza, oreStraordinario, un costruttore che assegna al lavoratore con
+    straordinari pagati un nome, un livello e un numero di ore di straordinario specificati, un metodo
+    stampaStraordinari() che stampa un messaggio contenente il numero di ore di straordinario. La classe deve
+    inoltre contenere una variabile statica reale retribuzioneOraria, inizializzata a 10.0, corrispondente alla
+    retribuzione di un'ora di straordinario (che si suppone uguale per tutti). La classe deve inoltre ridefinire il
+    metodo stampaStipendio() per tenere conto della retribuzione delle ore di straordinario: alla retribuzione base
+    (ereditata da Lavoratore) va sommata la retribuzione degli straordinari, ottenuta come retribuzione oraria dello
+    straordinario per numero di ore di straordinario effettuate. Scrivere infine un programma di prova per
+    collaudare le classi e i metodi.
 */
 
 import java.io.BufferedReader;
