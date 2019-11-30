@@ -2,7 +2,7 @@ public class LavoratoreConStraordinariPagati extends Lavoratore{
     private int oreStraordinario;
     private static final double retribuzioneOraria = 10.0;
 
-    public LavoratoreConStraordinariPagati(String name, int level, int salary, int oreStraordinario){
+    public LavoratoreConStraordinariPagati(String name, int level, float salary, int oreStraordinario){
         super(name, level, salary);
         this.oreStraordinario=oreStraordinario>=0?oreStraordinario:0;
     }

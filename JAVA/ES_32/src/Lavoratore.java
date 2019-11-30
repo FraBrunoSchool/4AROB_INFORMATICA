@@ -1,9 +1,9 @@
 public class Lavoratore {
     private String name;
     private int level;
-    private int salary;
+    private float salary;
 
-    public Lavoratore(String name, int level, int salary){
+    public Lavoratore(String name, int level, float salary){
         this.name=name;
         this.level=level>=0?level:0;
         this.salary=salary>=0?salary:0;
@@ -32,7 +32,7 @@ public class Lavoratore {
         return name;
     }
 
-    public int getSalary() {
+    public float getSalary() {
         return salary;
     }
 

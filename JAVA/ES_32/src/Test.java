@@ -15,10 +15,45 @@ straordinario per numero di ore di straordinario effettuate. Scrivere infine un 
 collaudare le classi e i metodi.
 */
 
-public class Test {
-    public static void main(String[] args) {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-        Lavoratore fra= new Lavoratore("fra", 2, 1500);
+public class Test {
+    public static void main(String[] args){
+
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader tastiera = new BufferedReader(input);
+
+        String nome = null;
+        int livello = 0;
+        float salario = 0;
+
+        System.out.println("inserire il nome: ");
+        try {
+            nome = tastiera.readLine();
+        } catch (IOException e) {
+            System.out.println("IO error");
+        }
+        System.out.println(nome);
+
+        try {
+            livello = Integer.parseInt(tastiera.readLine());
+        } catch (IOException e) {
+            System.out.println("IO error");
+        } catch (NumberFormatException e){
+            System.out.println("Non hai inserito un numero intero");
+        }
+
+        try {
+            salario = Float.parseFloat(tastiera.readLine());
+        } catch (IOException e) {
+            System.out.println("IO error");
+        } catch (NumberFormatException e){
+            System.out.println("Non hai inserito un numero float");
+        }
+
+        Lavoratore fra= new Lavoratore(nome, livello, salario);
         System.out.println(fra.toString());
         System.out.println(fra.stampaStipendio());
         LavoratoreConStraordinariPagati a1 = new LavoratoreConStraordinariPagati("a1", 2, 500);
