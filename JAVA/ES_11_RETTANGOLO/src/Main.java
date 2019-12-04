@@ -15,7 +15,6 @@ public class Main {
         float base = 0;
         float altezza = 0;
 
-
         do {
             System.out.println("Inserire Base : ");
             try {
