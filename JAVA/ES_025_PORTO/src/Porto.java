@@ -21,71 +21,58 @@ public class Porto {
     public void setCostoAlMetro(float costoAlMetro) {
         this.costoAlMetro=costoAlMetro>=0?costoAlMetro:0;
     }
-    public void addPosto(Posto posto){
-        if (nPosti<MAX_POSTI){
-            this.posti[nPosti]=posto;
-            nPosti++;
+
+    public String addPosto(int x, Posto posto){
+        if(posti[x]==null){
+            posti[x]=posto;
+            return "Assegnato";
+        }else {
+            return "Occupato";
         }
     }
-    public String nomeAffittuario(Posto posto){
-        int tro =-1;
-        int k = 0;
-        while (k<nPosti && tro==-1){
-            if (posti[k]==posto){
-                return posti[k].getCliente();
-            }
-            k++;
+    
+    public String nomeAffittuario(int x){
+        if(posti[x]==null){
+            return "Non Assegnato";
+        }else {
+            return "Nome cliente: " + posti[x].getCliente();
         }
-        if (tro==-1){
-            return "Questo posto non c'è";
-        }
-        return null;
     }
 
-    public float getPrezzo(Posto posto){
-        int tro =-1;
-        int k = 0;
-        while (k<nPosti && tro==-1){
-            if (posti[k]==posto){
-                return (float) ((posti[k].getFine().getTimeInMillis()-posti[k].getInizio().getTimeInMillis())
-                        *(24 * 60 * 60 * 1000) *(posti[k].getBarca().getDimensione()*costoAlMetro));
-            }
-            k++;
+    public String getPrezzo(int x){
+
+        if(posti[x]==null){
+            return "Non Assegnato";
+        }else {
+            return "Costo: " + ((posti[x].getFine().getTimeInMillis()-posti[x].getInizio().getTimeInMillis())
+                    *(24 * 60 * 60 * 1000) *(posti[x].getBarca().getDimensione()*costoAlMetro));
         }
-        if (tro==-1){
-            return (float)0;
-        }
-        return 0;
     }
 
-    public String controlla(Posto posto){
-        int tro =-1;
-        int k = 0;
-        while (k<nPosti && tro==-1){
-            if (posti[k]==posto){
-                return "Occupato";
-            }
-            k++;
+    public String controlla(int x){
+        if(posti[x]==null){
+            return "Libero";
+        }else {
+            return "Non disponibile";
         }
-        if (tro==-1){
+    }
+
+    public String affittaPosto(int x, Posto posto){
+        if (controlla(x).equals("Libero")){
+            posti[x]=posto;
+            return "Registrato";
+        }else{
+            return "Già occupato";
+        }
+    }
+
+    public String liberaPosto(int x){
+        if (controlla(x).equals("Non disponibile")){
+            String prezzo = getPrezzo(x);
+            posti[x] = null;
+            return prezzo;
+        }else{
             return "Libero";
         }
-        return null;
-    }
-
-    public String affittaPosto(Posto posto){
-        int trov =-2;
-        int k = 0;
-        while (k<nPosti && trov==-2){
-            if (posti[k]==posto){
-                return "Affittato";
-            }
-            k++;
-        }
-        if (trov==-2){
-
-            return "Libero";
-        }
-        return null;
     }
 }
