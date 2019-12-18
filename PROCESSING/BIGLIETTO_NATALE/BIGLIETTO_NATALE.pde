@@ -18,6 +18,7 @@
   String audioName = "aNatalePuoi.mp3";
   String path;
 */
+
 private Biglietto biglietto;
 private Stella stella;
 private Tronco tronco;
@@ -43,6 +44,7 @@ public void setup() {
     scritta = new Scritta();
     palline = new Pallina[N_PALLINE];
     stellaAlbero = new Stella();
+    
     /*
     path = sketchPath(audioName);
     file = new SoundFile(this, path);
