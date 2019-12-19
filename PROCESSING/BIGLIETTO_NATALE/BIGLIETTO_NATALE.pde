@@ -10,14 +10,11 @@
       SI VALUTERA' anche la complessità del progetto
 */
 
-/*
-  import processing.sound.*;
-  //right above the setup function, add the following code
-  SoundFile file;
-    //replace the sample.mp3 with your audio file name here
-  String audioName = "aNatalePuoi.mp3";
-  String path;
-*/
+import processing.sound.*;
+
+PImage immagine;
+
+SoundFile file;
 
 private Biglietto biglietto;
 private Stella stella;
@@ -26,16 +23,22 @@ private Pino pino;
 private Scritta scritta;
 private Pallina[] palline;
 private Stella stellaAlbero;
+private Neve neve;
 
 private final int N_PALLINE = 8;
 private int stato = 0;
 
 public void settings(){
-  size(1050, 550);
+    size(1050, 550);
+    file = new SoundFile(this, "aNatalePuoi.mp3");
+    file.play();
+  
 }
 
 public void setup() {   
     background(255,255,255);
+    
+    immagine = loadImage("Cristalli.jpg");
     
     biglietto = new Biglietto();
     stella = new Stella();
@@ -44,18 +47,16 @@ public void setup() {
     scritta = new Scritta();
     palline = new Pallina[N_PALLINE];
     stellaAlbero = new Stella();
-    
-    /*
-    path = sketchPath(audioName);
-    file = new SoundFile(this, path);
-    file.play();
-    */
+    neve = new Neve();    
 }
   
 public void draw(){
+    image(immagine, 0, 0, width, height);
+    
     biglietto.setColore(color(220,20,60)); 
     biglietto.show();  
     
+    neve.show();
     stella.setColore(color(255,255,0)); 
     stella.show(); 
     
@@ -151,7 +152,6 @@ public void draw(){
       }
     }
     stellaAlbero.show();
-   
-    delay(70);
-                      
+    
+    delay(70);              
 }
