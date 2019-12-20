@@ -10,6 +10,7 @@
       SI VALUTERA' anche la complessità del progetto
 */
 
+
 import processing.sound.*;
 
 PImage immagine;

@@ -41,6 +41,7 @@ public class Tronco {
   
   public void setColore(color colore){
     this.colore = color(colore);
+    bordo = colore;
   }
   
   public color getColore(){
