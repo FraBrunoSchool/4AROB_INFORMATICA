@@ -15,6 +15,7 @@ public class Inizio extends PApplet {
     */
     private int DIM_X = 854;
     private int DIM_Y = 480;
+
     // The argument passed to main must match the class name
     public static void main(String[] args) {
         PApplet.main("Inizio");
@@ -33,7 +34,6 @@ public class Inizio extends PApplet {
 
     // runs over and over again as long as the program is still running
     public void draw(){
-
         Random rand = new Random();
         c.setCordX(random(DIM_X));
         c.setCordY(random(DIM_Y));
