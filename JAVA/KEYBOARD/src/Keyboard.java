@@ -1,107 +1,129 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Keyboard {
-    private InputStreamReader input;
-    private BufferedReader tastiera;
+    private static BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
-    public Keyboard(){
-        input = new InputStreamReader(System.in);
-        tastiera = new BufferedReader(input);
+    public static int readInteger(){
+        int numInt = 0;
+        boolean err;
+
+        do {
+            err= false;
+            System.out.println("Insert Integer: ");
+            try {
+                numInt = Integer.parseInt(keyboard.readLine());
+                err = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid integer");
+            } catch (IOException e) {
+                System.out.println("IO error");
+            }
+        }while(!err);
+
+        return numInt;
     }
 
-    public int readInteger(){
-        int app = 0;
+    public static int readInteger(String msg){
+        int numInt = 0;
+        boolean err;
 
-        try {
-            app = Integer.parseInt(tastiera.readLine());
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }catch (NumberFormatException e) {
-            System.out.println("Non hai inserito un numero corretto");
-        }
+        do {
+            err= false;
+            System.out.println(msg);
+            try {
+                numInt = Integer.parseInt(keyboard.readLine());
+                err = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid integer");
+            } catch (IOException e) {
+                System.out.println("IO error");
+            }
+        }while(!err);
 
-        return app;
+        return numInt;
     }
 
-    public int readInteger(String msg){
-        int app = 0;
-        System.out.println(msg)
-        try {
-            app = Integer.parseInt(tastiera.readLine());
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }catch (NumberFormatException e) {
-            System.out.println("Non hai inserito un numero corretto");
-        }
+    public static int readInteger(String msg, int min, int max) throws ValoreNonNelRange{
+        int numInt = 0;
+        boolean err;
 
-        return app;
+        do {
+            err= false;
+            System.out.println(msg);
+            try {
+                numInt = Integer.parseInt(keyboard.readLine());
+                if (numInt<min||numInt>max) throw new ValoreNonNelRange("tra "+min+" e "+max);
+                err = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid integer");
+            } catch (IOException e) {
+                System.out.println("IO error");
+            }
+        }while(!err);
+
+        return numInt;
     }
 
-    public int readInteger(String msg, int min, int max){
-        int app = 0;
+    public static float readFloat(){
+        float numFlo = 0;
+        boolean err;
 
-        try {
-            app = Integer.parseInt(tastiera.readLine());
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }catch (NumberFormatException e) {
-            System.out.println("Non hai inserito un numero corretto");
-        }
+        do {
+            err= false;
+            System.out.println("Insert Integer: ");
+            try {
+                numFlo =  Float.parseFloat(keyboard.readLine());
+                err = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid integer");
+            } catch (IOException e) {
+                System.out.println("IO error");
+            }
+        }while(!err);
 
-        return app;
+        return numFlo;
     }
 
-    public String readString(){
-        String app = null;
+    public static float readFloat(String msg){
+        float numFlo = 0;
+        boolean err;
 
-        try {
-            app = tastiera.readLine();
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }
+        do {
+            err= false;
+            System.out.println(msg);
+            try {
+                numFlo = Float.parseFloat(keyboard.readLine());
+                err = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid integer");
+            } catch (IOException e) {
+                System.out.println("IO error");
+            }
+        }while(!err);
 
-        return app;
+        return numFlo;
     }
 
-    public float readFloat(){
-        float app = 0.0f;
+    public static float readFloat(String msg, float min, float max) throws ValoreNonNelRange{
+        float numFlo = 0;
+        boolean err;
 
-        try {
-            app = Float.parseFloat(tastiera.readLine());
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }catch (NumberFormatException e) {
-            System.out.println("Non hai inserito un numero corretto");
-        }
+        do {
+            err= false;
+            System.out.println(msg);
+            try {
+                numFlo =  Float.parseFloat(keyboard.readLine());
+                if (numFlo<min||numFlo>max) throw new ValoreNonNelRange("tra "+min+" e "+max);
+                err = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid integer");
+            } catch (IOException e) {
+                System.out.println("IO error");
+            }
+        }while(!err);
 
-        return app;
-    }
-
-    
-
-    public double readDouble(){
-        double app = 0.0;
-
-        try {
-            app = Double.parseDouble(tastiera.readLine());
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }catch (NumberFormatException e) {
-            System.out.println("Non hai inserito un numero corretto");
-        }
-
-        return app;
-    }
-
-    public char readChar(){
-        char app = ' ';
-
-        try {
-            app = (char) tastiera.read();
-        } catch (IOException e) {
-            System.out.printf("errore di IO");
-        }catch (NumberFormatException e) {
-            System.out.println("Non hai inserito un numero corretto");
-        }
-
-        return app;
+        return numFlo;
     }
 }
