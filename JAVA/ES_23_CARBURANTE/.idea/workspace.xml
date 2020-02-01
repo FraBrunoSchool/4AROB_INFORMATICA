@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab710269-63ed-4177-aad6-3c36dfd04be7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../CLASSE_TASTIERA/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSE_TASTIERA/.idea/CLASSE_TASTIERA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSE_TASTIERA/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSE_TASTIERA/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLASSE_TASTIERA/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_022_VETTORIINTERI/ES_022_VETTORIINTERI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_022_VETTORIINTERI/src/ErroreElementoInesistente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_022_VETTORIINTERI/src/ErroreVettoreVuoto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_022_VETTORIINTERI/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_022_VETTORIINTERI/src/VettoriInteri.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ES_23_CARBURANTE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ES_23_CARBURANTE/ArrayEmpty.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ES_23_CARBURANTE/Carburante.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/ES_23_CARBURANTE/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ArrayEmpty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Carburante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PrezzoNonValido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_ANIMALI/ES_ANIMALI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_ANIMALI/src/Animale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_ANIMALI/src/Leone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_ANIMALI/src/Scoiattolo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_ANIMALI/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_TEMPO/ES_TEMPO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_TEMPO/src/ErroreTempo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_TEMPO/src/ErroreTempoControllato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_TEMPO/src/TempoControllato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_TEMPO/src/TempoNonControllato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ES_TEMPO/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_10_CERCHIO/ES_10_CERCHIO.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_10_CERCHIO/out/production/ES_10_CERCHIO/Cerchio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_10_CERCHIO/out/production/ES_10_CERCHIO/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_10_CERCHIO/src/Cerchio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_10_CERCHIO/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_11_RETTANGOLO/ES_11_RETTANGOLO.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_11_RETTANGOLO/out/production/ES_11_RETTANGOLO/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_11_RETTANGOLO/out/production/ES_11_RETTANGOLO/Rettangolo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_11_RETTANGOLO/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_11_RETTANGOLO/src/Rettangolo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/ES_12.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/out/production/ES_12/Cerchio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/out/production/ES_12/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/out/production/ES_12/Rettangolo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/src/Cerchio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_12/src/Rettangolo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/ES_31_LIBRO.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/out/production/ES_31_LIBRO/Libro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/out/production/ES_31_LIBRO/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/out/production/ES_31_LIBRO/Vocabolario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/src/Libro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_31_LIBRO/src/Vocabolario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/ES_32.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/out/production/ES_32/Azienda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/out/production/ES_32/Lavoratore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/out/production/ES_32/LavoratoreConStraordinariPagati.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/out/production/ES_32/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/src/Azienda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/src/Lavoratore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/src/LavoratoreConStraordinariPagati.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ES_32/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PROCESSING_IN_JAVA/ES_001_INFINITEPALLINE/out/production/ES_001_INFINITEPALLINE/Inizio.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROCESSING_IN_JAVA/ES_001_INFINITEPALLINE/out/production/ES_001_INFINITEPALLINE/Inizio.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1X7ZicMOnfDnnOJkDQ03pYN6YVd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CLASSE_TASTIERA" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="ES_23_CARBURANTE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab710269-63ed-4177-aad6-3c36dfd04be7" name="Default Changelist" comment="" />
+      <created>1580399221738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580399221738</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="BRANCHES_LOG">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="437" y="101" width="482" height="594" key="#com.intellij.ide.util.MemberChooser" timestamp="1580401872411">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="437" y="101" width="482" height="594" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1580401872411" />
+    <state x="466" y="155" width="424" height="486" key="FileChooserDialogImpl" timestamp="1580458918275">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="155" width="424" height="486" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580458918275" />
+    <state width="1324" height="175" key="GridCell.Tab.0.bottom" timestamp="1580402076209">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1324" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580402076209" />
+    <state width="1324" height="175" key="GridCell.Tab.0.center" timestamp="1580402076208">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1324" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580402076208" />
+    <state width="1324" height="175" key="GridCell.Tab.0.left" timestamp="1580402076208">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1324" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580402076208" />
+    <state width="1324" height="175" key="GridCell.Tab.0.right" timestamp="1580402076208">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1324" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580402076208" />
+    <state x="266" y="143" width="824" height="510" key="IDE.errors.dialog" timestamp="1580400888779">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="266" y="143" width="824" height="510" key="IDE.errors.dialog/0.27.1366.741@0.27.1366.741" timestamp="1580400888779" />
+    <state x="386" y="27" width="583" height="741" key="refactoring.ChangeSignatureDialog" timestamp="1580401732789">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="386" y="27" width="583" height="741" key="refactoring.ChangeSignatureDialog/0.27.1366.741@0.27.1366.741" timestamp="1580401732789" />
+  </component>
+</project>
