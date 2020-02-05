@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KEYBOARD:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KEYBOARD_jar</output-path>
+    <root id="archive" name="KEYBOARD.jar">
+      <element id="module-output" name="KEYBOARD" />
+    </root>
+  </artifact>
+</component>
