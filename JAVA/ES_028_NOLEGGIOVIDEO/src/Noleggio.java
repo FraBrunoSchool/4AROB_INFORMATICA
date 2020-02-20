@@ -7,12 +7,9 @@ public class Noleggio {
     private java.time.LocalDate dataPrestito;
     private java.time.LocalDate dataReso;
 
-    public Noleggio(String nomeCliente,
-                    String titolo, String genere, String noleggiato,
-                    int annoPrestito, int mesePrestito, int giornoPrestito,
-                    float prezzo){
+    public Noleggio(String nomeCliente, Prodotto p, int annoPrestito, int mesePrestito, int giornoPrestito){
         this.nomeCliente=nomeCliente;
-        prodotto = new Prodotto(titolo, genere, noleggiato, prezzo);
+        prodotto = p;
         dataPrestito = LocalDate.of(annoPrestito, mesePrestito, giornoPrestito);
     }
 
@@ -25,12 +22,12 @@ public class Noleggio {
 
     @Override
     public String toString() {
-        return "Noleggio{" +
-                "nomeCliente='" + nomeCliente + '\'' +
-                ", prodotto=" + prodotto.toString() +
-                ", dataPrestito=" + dataPrestito +
-                ", dataReso=" + dataReso +
-                '}';
+        return "Noleggio{\n" +
+                "\tnomeCliente='" + nomeCliente + '\'' +
+                ",\n\t" + prodotto.toStringLista() +
+                ",\n\tdataPrestito=" + dataPrestito +
+                ", \n\tdataReso=" + dataReso +
+                "}\n";
     }
 
     public LocalDate getDataPrestito() {

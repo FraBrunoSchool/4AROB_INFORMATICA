@@ -12,23 +12,31 @@ DataReso. Creare un'applicazione (console) che:
     - Eliminare un film (dato il titolo)
 */
 
+import Keyboard.Keyboard;
+
+/*LocalDate today = LocalDate.now();*/
+
 public class Main {
     public static void main(String[] args) {
-        Noleggio n = new Noleggio("fra", "ggg", "horror", "si",
-                2020, 3, 1, 5f);
-        Noleggio n1 = new Noleggio("fra", "ggg", "horror", "si",
-                2020, 3, 1, 5f);
-        Noleggio n2 = new Noleggio("fra", "ggg", "horror", "si",
-                2020, 3, 1, 5f);
-        ListaFilm l = new ListaFilm();
-        l.addNoleggio(n);
-        l.addNoleggio(n1);
-        l.addNoleggio(n2);
-        System.out.println(n.reso(2020, 3, 5));
-        System.out.println(n1.reso(2020, 3, 5));
-        System.out.println(n2.reso(2020, 3, 5));
-        System.out.println(l.visualizza());
-        System.out.println(l.getFilmNoleggiati("fra"));
+        Prodotto p =  new Prodotto("6 UnderGround", "azione", 5f);
+        Noleggio n = new Noleggio("fra", p, 2020, 3, 1);
 
+        Prodotto p1 =  new Prodotto("Hobs and Shaw", "azione", 5f);
+        Noleggio n1 = new Noleggio("bado", p1, 2020, 3, 1);
+
+        Prodotto p2 =  new Prodotto("american pie", "hot", 5f);
+        Noleggio n2 = new Noleggio("best", p2, 2020, 3, 1);
+
+        ListaFilm l = new ListaFilm();
+        l.addFilm(p);
+        l.addFilm(p1);
+        l.addFilm(p2);
+        System.out.println(l.visualizzaListaFilm());
+
+        ListaNoleggi nol = new ListaNoleggi();
+        nol.addNoleggio(n);
+        nol.addNoleggio(n1);
+        nol.addNoleggio(n2);
+        System.out.println(nol.visualizzaListaNoleggi());
     }
 }

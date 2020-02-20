@@ -1,22 +1,27 @@
 import java.util.Vector;
 
 public class ListaFilm {
-    private Vector <Noleggio> lista;
+    private static Vector <Prodotto> lista;
 
     public ListaFilm(){
-        lista = new Vector<Noleggio>();
+        lista = new Vector<Prodotto>();
     }
 
-    public void addNoleggio(Noleggio n){
+    public static void addFilm(Prodotto n){
         lista.add(n);
     }
 
-    public String getFilmNoleggiati(String nome){
-        String film ="";
-        for (int i = 0; i < lista.size(); i++) if (lista.get(i).getNomeCliente().equals(nome)) film+=" | "+ lista.get(i).getProdotto().getTitolo();
-        return film;
+    public Prodotto getFilm(String titolo){
+        for (int i = 0; i < lista.size(); i++)
+            if (lista.get(i).getTitolo().equals(titolo)) {
+                Prodotto p = new Prodotto(lista.get(i).getTitolo(), lista.get(i).getGenere(), lista.get(i).getPrezzo());
+                lista.removeElementAt(i);
+                return p;
+            }
+        return null;
     }
-    public String visualizza(){
+
+    public String visualizzaListaFilm(){
         String print="";
         for (int i = 0; i < lista.size(); i++) print+="\n"+lista.get(i).toString();
         return print;

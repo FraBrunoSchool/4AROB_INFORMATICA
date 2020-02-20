@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="KEYBOARD">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/KEYBOARD.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
