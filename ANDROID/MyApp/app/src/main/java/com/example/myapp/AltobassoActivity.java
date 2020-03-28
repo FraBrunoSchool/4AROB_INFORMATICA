@@ -7,14 +7,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.TextView;
+
+import java.util.Random;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class AltobassoActivity extends AppCompatActivity {
+    private static final String TAG = "AltobassoActivity";
+
+    private TextView txtN, txtEsito;
+    private int rnd, n, n_tentativi = 0;
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -78,8 +88,18 @@ public class AltobassoActivity extends AppCompatActivity {
     private final View.OnTouchListener mDelayHideTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
-            if (AUTO_HIDE) {
-                delayedHide(AUTO_HIDE_DELAY_MILLIS);
+            switch (motionEvent.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    if (AUTO_HIDE) {
+                        delayedHide(AUTO_HIDE_DELAY_MILLIS);
+                    }
+                    break;
+                case MotionEvent.ACTION_UP:
+                    AltobassoActivity.this.finish();
+                    view.performClick();
+                    break;
+                default:
+                    break;
             }
             return false;
         }
@@ -92,9 +112,37 @@ public class AltobassoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_altobasso);
 
         mVisible = true;
+        // BIND
         mControlsView = findViewById(R.id.fullscreen_content_controls);
-        mContentView = findViewById(R.id.fullscreen_content);
+        mContentView = findViewById(R.id.txtEsito);
+        txtN = findViewById(R.id.txtN);
+        txtEsito = findViewById(R.id.txtEsito);
 
+        // Random Numero
+        Random r = new Random();
+        rnd = r.nextInt(100);
+        Log.i(TAG, "Numero Random: " + rnd);
+
+        // setup Event Listener
+        txtN.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_GO){
+                    // Se premuto ActionGo
+                    n = Integer.parseInt(String.valueOf(txtN.getText()));
+                    n_tentativi++;
+                    if(n > rnd){
+                        txtEsito.setText("ALTO");
+                    }else if(n < rnd){
+                        txtEsito.setText("BASSO");
+                    }else{
+                        txtEsito.setText("INDOVINATO IN " + n_tentativi + " TENTATIV" + ((n_tentativi>1) ? "I" : "O") + "!");
+                    }
+                    txtN.setText("");
+                }
+                return false;
+            }
+        });
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -108,11 +156,7 @@ public class AltobassoActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
-
-        //codice qui
-
     }
-
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
@@ -146,7 +190,6 @@ public class AltobassoActivity extends AppCompatActivity {
         mHideHandler.postDelayed(mHidePart2Runnable, UI_ANIMATION_DELAY);
     }
 
-    @SuppressLint("InlinedApi")
     private void show() {
         // Show the system bar
         mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN

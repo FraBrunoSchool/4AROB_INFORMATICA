@@ -4,41 +4,80 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "Main Activity";
-    private Button btnSal, btnAltoBasso;
-    private TextView txtS;
+    private static final String TAG = "MainActivity";
+    private TextView txtSaluta;
+    private Button btnSaluta, btnAltobasso, btnAccelerometro, btnFotocamera, btnTris;
+    private boolean stato = true;
+    private String text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Collego componenti grafiche
+        bindComponents();
+        // Collego Listener per gestione eventi
+        setupEventListener();
     }
 
-    private void bindComponent(){
-        btnSal = findViewById(R.id.btnSaluta);
-        txtS = findViewById(R.id.txtSaluta);
-        btnAltoBasso = findViewById(R.id.btnAltoBasso);
+    private void bindComponents(){
+        //assegna ad una variabile i componenti di activity_main
+        txtSaluta = findViewById(R.id.lblTitolo);
+        btnSaluta = findViewById(R.id.btnSaluta);
+        btnAltobasso = findViewById(R.id.btnAltobasso);
+        btnAccelerometro = findViewById(R.id.btnAccel);
+        btnFotocamera = findViewById(R.id.btnFoto);
+        btnTris = findViewById(R.id.btnTris);
+        text = (String) txtSaluta.getText();
     }
 
     private void setupEventListener(){
-        btnSal.setOnClickListener(new View.OnClickListener() {
+        btnSaluta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtS.setText("Benvenuto, Marco!");
+                // cambia il testo "La mia prima app" al click del pulsante
+                if(stato == true){
+                    txtSaluta.setText("Ciao a tutti!!!");
+                    stato = false;
+                }else{
+                    txtSaluta.setText(text);
+                    stato=true;
+                }
             }
         });
-        btnAltoBasso.setOnClickListener(new View.OnClickListener() {
+        //al click su questi button si apre una nuova activity
+        btnAltobasso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Avvio nuova Activity per giocare ad Alto&Basso
                 Intent intent = new Intent(MainActivity.this, AltobassoActivity.class);
-                //intent.putExtra("var", "valore");
+                startActivity(intent);
+            }
+        });
+        btnAccelerometro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AccActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnFotocamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent intent = new Intent(MainActivity.this, FotoActivity.class);
+                // startActivity(intent);
+            }
+        });
+        btnTris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TrisActivity.class);
+                intent.putExtra("g1", "Fra");
+                intent.putExtra("g2", "Best");
                 startActivity(intent);
             }
         });

@@ -6,38 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnSaluta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnsaluta"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="39dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/txtSaluta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtsaluta"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="125dp" />
+            <TextView
+                android:id="@+id/lblTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titolo"
+                android:background="@color/colorPrimaryDark"
+                android:padding="15sp"
+                android:enabled="false"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                />
 
-    <Button
-        android:id="@+id/btnAltoBasso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnaltobasso"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="218dp" />
-
+            <Button
+                android:id="@+id/btnSaluta"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/saluta"
+                android:background="@color/colorArancio"
+                android:textColor="@color/colorRosso"
+                android:textSize="38dp"
+                />
+            <Button
+                android:id="@+id/btnAltobasso"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/alto_basso"
+                android:background="@color/colorArancio"
+                android:textColor="@color/colorRosso"
+                android:textSize="38dp"
+                />
+            <Button
+                android:id="@+id/btnAccel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/accelerometro"
+                android:background="@color/colorArancio"
+                android:textColor="@color/colorRosso"
+                android:textSize="38dp"
+                android:hint="@string/alto_basso"
+                />
+            <Button
+                android:id="@+id/btnFoto"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/fotocamera"
+                android:background="@color/colorArancio"
+                android:textColor="@color/colorRosso"
+                android:textSize="38dp"
+                android:hint="@string/alto_basso"
+                />
+            <Button
+                android:id="@+id/btnTris"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/tris"
+                android:background="@color/colorArancio"
+                android:textColor="@color/colorRosso"
+                android:textSize="38dp"
+                android:hint="@string/alto_basso"
+                />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

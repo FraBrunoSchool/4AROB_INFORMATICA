@@ -9,23 +9,43 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/inserisci_numero"
+                android:textSize="35sp"
+                android:paddingTop="25sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:imeOptions="actionGo"
+                />
+
+            <TextView
+                android:id="@+id/txtEsito"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:keepScreenOn="true"
+                android:text="@string/esito_numero"
+                android:textColor="#33b5e5"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
@@ -46,15 +66,6 @@
                 android:text="@string/dummy_button" />
 
         </LinearLayout>
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_margin="100dp"
-            android:text="Name" />
     </FrameLayout>
 
 </FrameLayout>
