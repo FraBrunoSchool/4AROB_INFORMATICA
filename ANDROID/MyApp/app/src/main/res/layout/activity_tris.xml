@@ -39,25 +39,19 @@
                     android:id="@+id/btn00"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0.0"
-                    tools:layout_editor_absoluteX="62dp"
-                    tools:layout_editor_absoluteY="160dp" />
+                    android:text="@string/_0_0"/>
 
                 <Button
                     android:id="@+id/btn01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0.1"
-                    tools:layout_editor_absoluteX="150dp"
-                    tools:layout_editor_absoluteY="160dp" />
+                    android:text="@string/_0_1"/>
 
                 <Button
                     android:id="@+id/btn02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0.2"
-                    tools:layout_editor_absoluteX="238dp"
-                    tools:layout_editor_absoluteY="160dp" />
+                    android:text="@string/_0_2" />
             </TableRow>
 
             <TableRow
@@ -69,7 +63,7 @@
                     android:id="@+id/btn10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.0"
+                    android:text="@string/_1_0"
                     tools:layout_editor_absoluteX="62dp"
                     tools:layout_editor_absoluteY="208dp" />
 
@@ -77,7 +71,7 @@
                     android:id="@+id/btn11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.1"
+                    android:text="@string/_1_1"
                     tools:layout_editor_absoluteX="150dp"
                     tools:layout_editor_absoluteY="208dp" />
 
@@ -85,7 +79,7 @@
                     android:id="@+id/btn12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1.2"
+                    android:text="@string/_1_2"
                     tools:layout_editor_absoluteX="238dp"
                     tools:layout_editor_absoluteY="208dp" />
             </TableRow>
@@ -99,7 +93,7 @@
                     android:id="@+id/btn20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.0"
+                    android:text="@string/_2_0"
                     tools:layout_editor_absoluteX="62dp"
                     tools:layout_editor_absoluteY="256dp" />
 
@@ -107,7 +101,7 @@
                     android:id="@+id/btn21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.1"
+                    android:text="@string/_2_1"
                     tools:layout_editor_absoluteX="150dp"
                     tools:layout_editor_absoluteY="256dp" />
 
@@ -115,10 +109,23 @@
                     android:id="@+id/btn22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2.2"
+                    android:text="@string/_2_2"
                     tools:layout_editor_absoluteX="238dp"
                     tools:layout_editor_absoluteY="256dp" />
             </TableRow>
         </TableLayout>
+        <TextView
+            android:id="@+id/lbToccaA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tocca_a"
+            android:background="@color/colorPrimaryDark"
+            android:padding="15sp"
+            android:enabled="false"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
