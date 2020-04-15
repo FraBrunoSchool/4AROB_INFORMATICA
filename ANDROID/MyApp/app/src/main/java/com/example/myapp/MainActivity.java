@@ -75,10 +75,11 @@ public class MainActivity extends AppCompatActivity {
         btnTris.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TrisActivity.class);
-                intent.putExtra("g1", "Fra");
-                intent.putExtra("g2", "Best");
-                startActivity(intent);
+                Intent intenzione;
+                intenzione = new Intent(MainActivity.this, TrisActivity.class);
+                intenzione.putExtra("g1", "Marco");
+                intenzione.putExtra("g2", "Luca");
+                startActivity(intenzione);
             }
         });
     }

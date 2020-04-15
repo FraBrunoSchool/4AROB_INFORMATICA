@@ -33,14 +33,7 @@
     <!-- TRIS ACT -->
     <string name="tit_tris">Sfidanti</string>
     <string name="tocca_a">Tocca a</string>
-    <string name="_2_2">2.2</string>
-    <string name="_2_1">2.1</string>
-    <string name="_2_0">2.0</string>
-    <string name="_1_2">1.2</string>
-    <string name="_1_1">1.1</string>
-    <string name="_1_0">1.0</string>
-    <string name="_0_2">0.2</string>
-    <string name="_0_1">0.1</string>
-    <string name="_0_0">0.0</string>
+    <string name="celleVuote">-</string>
+    <string name="reset">Reset</string>
 
 </resources>

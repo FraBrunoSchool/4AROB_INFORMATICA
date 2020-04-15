@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tit_tris"
         android:background="@color/colorPrimaryDark"
-        android:padding="15sp"
+        android:layout_margin="20dp"
+        android:padding="10sp"
         android:enabled="false"
         android:textSize="30sp"
         android:textAlignment="center"
@@ -36,22 +37,22 @@
                 android:gravity="center">
                 <!--  Prima riga  id: 0-->
                 <Button
-                    android:id="@+id/btn00"
+                    android:id="@+id/btn_0_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_0_0"/>
+                    android:text="@string/celleVuote"/>
 
                 <Button
-                    android:id="@+id/btn01"
+                    android:id="@+id/btn_0_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_0_1"/>
+                    android:text="@string/celleVuote"/>
 
                 <Button
-                    android:id="@+id/btn02"
+                    android:id="@+id/btn_0_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_0_2" />
+                    android:text="@string/celleVuote" />
             </TableRow>
 
             <TableRow
@@ -60,26 +61,26 @@
                 android:gravity="center">
                 <!--  Seconda riga  id: 1-->
                 <Button
-                    android:id="@+id/btn10"
+                    android:id="@+id/btn_1_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_1_0"
+                    android:text="@string/celleVuote"
                     tools:layout_editor_absoluteX="62dp"
                     tools:layout_editor_absoluteY="208dp" />
 
                 <Button
-                    android:id="@+id/btn11"
+                    android:id="@+id/btn_1_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_1_1"
+                    android:text="@string/celleVuote"
                     tools:layout_editor_absoluteX="150dp"
                     tools:layout_editor_absoluteY="208dp" />
 
                 <Button
-                    android:id="@+id/btn12"
+                    android:id="@+id/btn_1_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_1_2"
+                    android:text="@string/celleVuote"
                     tools:layout_editor_absoluteX="238dp"
                     tools:layout_editor_absoluteY="208dp" />
             </TableRow>
@@ -90,26 +91,26 @@
                 android:gravity="center">
                 <!--  Terza riga riga  id: 2-->
                 <Button
-                    android:id="@+id/btn20"
+                    android:id="@+id/btn_2_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_2_0"
+                    android:text="@string/celleVuote"
                     tools:layout_editor_absoluteX="62dp"
                     tools:layout_editor_absoluteY="256dp" />
 
                 <Button
-                    android:id="@+id/btn21"
+                    android:id="@+id/btn_2_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_2_1"
+                    android:text="@string/celleVuote"
                     tools:layout_editor_absoluteX="150dp"
                     tools:layout_editor_absoluteY="256dp" />
 
                 <Button
-                    android:id="@+id/btn22"
+                    android:id="@+id/btn_2_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_2_2"
+                    android:text="@string/celleVuote"
                     tools:layout_editor_absoluteX="238dp"
                     tools:layout_editor_absoluteY="256dp" />
             </TableRow>
@@ -120,12 +121,22 @@
             android:layout_height="wrap_content"
             android:text="@string/tocca_a"
             android:background="@color/colorPrimaryDark"
-            android:padding="15sp"
+            android:layout_margin="20dp"
+            android:padding="10sp"
             android:enabled="false"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             />
-
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:padding="10sp"/>
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
