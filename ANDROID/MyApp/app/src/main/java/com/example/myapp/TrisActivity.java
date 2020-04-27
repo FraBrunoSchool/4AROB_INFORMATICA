@@ -120,6 +120,7 @@ public class TrisActivity extends AppCompatActivity {
             }
         }
     }
+
     private void setupEventListener(){
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override

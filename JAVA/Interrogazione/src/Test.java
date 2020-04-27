@@ -1,3 +1,15 @@
+/*
+    Si vogliono gestire le riparazioni che effettuano le varie officine meccaniche.
+    Di ogni officina interessano nome, indirizzo, numero dipendenti, e quali dipendenti lavorano in essa.
+    Dei dipendenti interessano: nominativo, anni di servizio e numero telefono.
+    Quando un veicolo arriva in un officina per una riparazione,
+    bisogna memorizzare ora e data di accettazione e quando viene riconsegnato,
+    ora e data di riconsegna, costo della riparazione e descrizione dei lavori effettuati.
+    Dei veicoli interessa memorizzare: modello, tipo (autoveicolo, motoveicolo, autocarro, …),
+    targa, anno di immatricolazione. Ogni officina è diretta da un direttore di cui interessa
+    conoscere anche la data di nascita, ma non gli anni di servizio.
+*/
+
 import java.util.Date;
 
 public class Test {
