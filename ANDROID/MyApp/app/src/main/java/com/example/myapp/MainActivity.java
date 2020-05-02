@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private TextView txtSaluta;
-    private Button btnSaluta, btnAltobasso, btnAccelerometro, btnFotocamera, btnTris;
+    private Button btnSaluta, btnAltobasso, btnAccelerometro, btnFotocamera, btnTris, btnForza4;
     private boolean stato = true;
     private String text;
 
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnAccelerometro = findViewById(R.id.btnAccel);
         btnFotocamera = findViewById(R.id.btnFoto);
         btnTris = findViewById(R.id.btnTris);
+        btnForza4 = findViewById(R.id.btnForza4);
         text = (String) txtSaluta.getText();
     }
 
@@ -80,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 intenzione.putExtra("g1", "Marco");
                 intenzione.putExtra("g2", "Luca");
                 startActivity(intenzione);
+            }
+        });
+        btnForza4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Forza4Activity.class);
+                startActivity(intent);
             }
         });
     }

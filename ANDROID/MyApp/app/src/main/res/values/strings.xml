@@ -35,5 +35,7 @@
     <string name="tocca_a">Tocca a</string>
     <string name="celleVuote">-</string>
     <string name="reset">Reset</string>
+    <string name="forza4_vs" />
+    <string name="Forza4">Forza 4</string>
 
 </resources>
