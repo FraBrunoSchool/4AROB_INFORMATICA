@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <script src="script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="OrologioScorrevole()">
+    <div class="oroInCentro">
+    <span id="orologio"></span>
+  </div>
+    <div id="form_id">
+      <form id="frm">
+        Nome <input name="Nome" id="txtNome" type="text">
+        Cognome <input name="Cognome" id="txtCognome" type="text">
+        <br>
+        <p>Sesso:
+          <input name="radSex" id="radSexF" type="radio" value="" onclick="AggiungiTogliCampo()">F
+          <input name="radSex" id="radSexM" type="radio" value="" checked="checked" onclick="AggiungiTogliCampo()">M
+        </p>
+        <p class="hide" id="textCheck">Sposata
+          <input name="sposata" id="chkF" type="checkbox" value="sposata" class="hide">
+        </p>
+        <input name="Submit" id="btnSubmit" type="button" onClick="Submit()" value="Submit">
+        </form>
+      </div>
+  </body>
+</html>

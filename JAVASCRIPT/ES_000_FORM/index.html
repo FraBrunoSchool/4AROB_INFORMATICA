@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>controllo input</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <script src="script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onLoad="CaricaCombo();frm.reset()">
+  <div id="form_id">
+    <form id="frm">
+      nome <input name="Nome" id="txtNome" type="text">
+      telefono <input name="Tel" id="txtTel" type="text">
+      <br>
+      <input name="radSex" id="radSexF" type="radio" value="">F
+      <input name="radSex" id="radSexM" type="radio" value="">M
+      <br>
+      <input name="chkLingua" id="chkF" type="checkbox" value="francese"> francese
+      <input name="chkLingua" id="chkGB" type="checkbox" value="inglese"> inglese
+      <br>
+      <select name="Eta" id="cboEta">
+        <option value="0">seleziona un'et&agrave;</option>
+      </select>
+      <br>
+      commenti <textarea name="area1" id="area1" cols="20" rows="5"></textarea>
+      <br>
+      <input name="Annulla" id="btnReset" type="reset" value="Annulla" onClick="return ConfermaAnnulla()">
+      <input name="conferma" id="btnSubmit" type="button" onClick="Conferma()" value="Conferma"></p>
+    </form>
+  </div>
+  <div id="sub" class="hide">
+    <h2 align="center">Subimit avvenuto con successo</h2>
+    <h4 align="center">Ecco i suoi dati: </h4>
+    <p id="data" align="center"></p>
+  </div>
+</body>
+
+
+</html>
+<!--MODIFICA PER FARE IL SUBMIT SE CONFERMA I DATI INSERITI-->
