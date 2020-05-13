@@ -42,9 +42,29 @@
                     "marca": "crucial"
                 }
             ],
-            "nRam": 2,
-            "spessoreTaglio": 12,
-            "precisione": 0.5
+            "nRam": 1,
+            "numPuntiSec": 88
+        }
+    },
+    {
+        "nome": "terza",
+        "secondi": 30,
+        "robot": {
+            "nomeRobot": "terzo",
+            "costoSec": 300,
+            "processore": {
+                "marcaProcessore": "qualcomm",
+                "modello": "snapdragon",
+                "velocitaClock": 6
+            },
+            "memorie":[
+                {
+                    "GB": 12,
+                    "marca": "crucial"
+                }
+            ],
+            "nRam": 1,
+            "TipoMateriale": "FERRO"
         }
     }
 ]
