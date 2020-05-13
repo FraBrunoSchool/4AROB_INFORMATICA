@@ -1,0 +1,50 @@
+[
+    {
+        "nome": "prima",
+        "secondi": 10,
+        "robot": {
+            "nomeRobot": "primo",
+            "costoSec": 100,
+            "processore": {
+                "marcaProcessore": "intel",
+                "modello": "i5",
+                "velocitaClock": 4
+            },
+            "memorie":[
+                {
+                    "GB": 4,
+                    "marca": "ballistix"
+                },
+                {
+                    "GB": 16,
+                    "marca": "ballistix"
+                }
+            ],
+            "nRam": 2,
+            "spessoreTaglio": 12,
+            "precisione": 0.5
+        }
+    },
+    {
+        "nome": "seconda",
+        "secondi": 20,
+        "robot": {
+            "nomeRobot": "secondo",
+            "costoSec": 200,
+            "processore": {
+                "marcaProcessore": "amd",
+                "modello": "r5",
+                "velocitaClock": 5
+            },
+            "memorie":[
+                {
+                    "GB": 64,
+                    "marca": "crucial"
+                }
+            ],
+            "nRam": 2,
+            "spessoreTaglio": 12,
+            "precisione": 0.5
+        }
+    }
+]

@@ -1,0 +1,4 @@
+nome,secondi,nomeRobot,costoSec,marcaProcessore,modello,velocitaClock,GB,marcaMemoria,nRam,spessoreTaglio,precisione,numPuntiSec,TipoMateriale
+prima,10,primo,100,intel,i5,4,4,crucial,1,12,0.5,_,_
+seconda,20,secondo,200,amd,r5,5,8,crucial,2,_,_,88,_
+terza,30,terzo,300,qualcomm,snapdragon,6,12,crucial,3,_,_,_,FERRO
