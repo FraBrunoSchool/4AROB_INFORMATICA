@@ -5,7 +5,7 @@
 
 var valori = [3, 10, 1, 7, 12]
 
-const disegno = () => {
+function disegno() {
   var body = document.getElementsByTagName('body')[0]
   var canvas = document.createElement('canvas')
   body.appendChild(canvas)
@@ -25,7 +25,7 @@ const disegno = () => {
   ctx.stroke()
 }
 
-const getRandomColor = () => {
+function getRandomColor(){
   let letters = '0123456789ABCDEF'
   let color = '#'
   for (let i = 0; i < 6; i++) color += letters[Math.floor(Math.random() * 16)]
