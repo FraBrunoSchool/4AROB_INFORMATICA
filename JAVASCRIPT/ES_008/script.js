@@ -25,9 +25,7 @@ var giorni = {
 }
 
 function creazione() {
-  if (window.FileList && window.File && window.FileReader) {
-    document.getElementById('file-selector').addEventListener('change', caricaTesto);
-  }
+  if (window.FileList && window.File && window.FileReader) document.getElementById('file-selector').addEventListener('change', caricaTesto);
 }
 
 function caricaTesto(event) {
@@ -45,13 +43,7 @@ function caricaTesto(event) {
   //si assegna il gestore dell'evento load: se la lettura va a buon fine esegue la funzione anonima che visualizza il contenuto
   reader.addEventListener('load', event => {
     lezione = JSON.parse(event.target.result);
-    console.log(lezione);
-    //riempi tabella
-    lezione.forEach((item) => {
-      console.log(ore[item.ora] + "_" + giorni[item.giorno])
-      document.getElementById(ore[item.ora] + "_" + giorni[item.giorno]).innerHTML = item.materia
-      console.log(item)
-    });
+    lezione.forEach((item) => document.getElementById(ore[item.ora] + "_" + giorni[item.giorno]).innerHTML = item.materia);
   });
 
   //legge il file come un file di testo
@@ -63,15 +55,13 @@ function mostra(event) {
   console.log(id)
   let ora
   for (let property in ore) {
-    console.log(`${property}: ${ore[property]}`);
-    if (ore[property] == id[1]) {
+    if (ore[property] == id[0]) {
       ora = property
       break
     }
   }
   let giorno
   for (let property in giorni) {
-    console.log(`${property}: ${giorni[property]}`);
     if (giorni[property] == id[1]) {
       giorno = property
       break
@@ -80,9 +70,10 @@ function mostra(event) {
 
   console.log(giorno + " alle ore " + ora);
   lezione.forEach((item) => {
-    if (item.ora == ora && item.giorno == giorno) {
-      document.getElementById(event.currentTarget.id).innerHTML = item.docente + " _ " + item.aula
-    }
+    if (item.ora == ora && item.giorno == giorno) document.getElementById(event.currentTarget.id).innerHTML = item.docente + " _ " + item.aula
   });
-  ora = giorno = id = " "
 }
+
+const tornaNormale = () => lezione.forEach((item) => document.getElementById(ore[item.ora] + "_" + giorni[item.giorno]).innerHTML = item.materia)
+
+
