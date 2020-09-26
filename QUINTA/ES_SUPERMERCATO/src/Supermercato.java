@@ -1,14 +1,20 @@
+import java.io.IOException;
 import java.util.Vector;
 
 public class Supermercato {
     private Vector <Prodotto> prodotti;
     private String nome;
     private String nomeArchivio;
+    private CSVParser c;
+    private String fileName;
 
-    public Supermercato(String nome, String nomeArchivio){
+    public Supermercato(String nome, String nomeArchivio, String fileName) throws IOException {
         this.nome=nome;
         this.nomeArchivio=nomeArchivio;
         prodotti= new Vector<Prodotto>();
+        c = new CSVParser(fileName);
+        prodotti.addAll(c.readCSV());
+        this.fileName = fileName;
     }
 
     public void addProdotto(Prodotto prodotto){
@@ -39,7 +45,7 @@ public class Supermercato {
         return null; // se non esiste
     }
 
-    public void delateProdotto(Prodotto prodotto){
+    public void deleteProdotto(Prodotto prodotto){
         if(ricercaProdotto(prodotto.getCodiceProdotto())!=null && ricercaProdotto(prodotto.getNomeProdotto())!=null){
             prodotti.removeElement(prodotto);
         }
@@ -74,33 +80,11 @@ public class Supermercato {
         return "Nessun Responsabile Trovato";
     }
 
-
-    /*
-    public String toStringSave() {
-        char carattere = ' ';
-        return  produttore + carattere +
-                reparto + carattere +
-                categoria + carattere +
-                scaffale + carattere +
-                nomeProdotto + carattere +
-                quantita + carattere +
-                codiceProdotto + carattere +
-                unitaMisura + carattere +
-                prezzo + carattere +
-                taglia + carattere +
-                sconto + carattere +
-                responsabile + carattere +
-                telefono + carattere +
-                scadenza + carattere;
-    }
-    */
-
-
-    public Vector<String> salvaSupermercatoCSV(){
+    public void salvaSupermercatoCSV(){
         Vector <String> save = new Vector<String>();
         for (Prodotto p: prodotti) {
             save.add(p.toStringSave());
         }
-        return save;
+        c.writeCSV(save, fileName);
     }
 }

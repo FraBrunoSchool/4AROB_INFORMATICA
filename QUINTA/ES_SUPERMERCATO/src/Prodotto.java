@@ -16,6 +16,26 @@ public class Prodotto {
     private String telefono;
     private GregorianCalendar scadenza=null;
 
+    public Prodotto(String produttore, Enum reparto, Enum categoria,
+                    String scaffale, String nomeProdotto, double quantita,
+                    long codiceProdotto, Enum unitaMisura, float prezzo, String taglia,
+                    float sconto, String responsabile, String telefono, GregorianCalendar scadenza) {
+        this.produttore = produttore;
+        this.reparto = reparto;
+        this.categoria = categoria;
+        this.scaffale = scaffale;
+        this.nomeProdotto = nomeProdotto;
+        this.quantita = quantita;
+        this.codiceProdotto = codiceProdotto;
+        this.unitaMisura = unitaMisura;
+        this.prezzo = prezzo;
+        this.taglia = taglia;
+        this.sconto = sconto;
+        this.responsabile = responsabile;
+        this.telefono = telefono;
+        this.scadenza = scadenza;
+    }
+
     public String getProduttore() {
         return produttore;
     }
@@ -73,7 +93,7 @@ public class Prodotto {
     }
 
     public String toStringSave() {
-        char carattere = ' ';
+        char carattere = ',';
         return  produttore + carattere +
                 reparto + carattere +
                 categoria + carattere +
