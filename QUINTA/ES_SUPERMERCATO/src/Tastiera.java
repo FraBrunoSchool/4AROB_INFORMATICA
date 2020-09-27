@@ -22,7 +22,7 @@ public class Tastiera {
         boolean errore;
         do {
             errore = false;
-            System.out.println("inserisci un numero");
+            System.out.println(mess);
             try {
                 numInt = Integer.parseInt(tastiera.readLine());
                 if (numInt < min || numInt > max) throw new ValoreNonRange("inserire un numero tra " + min + "e" + max);
@@ -43,7 +43,7 @@ public class Tastiera {
         boolean errore;
         do {
             errore = false;
-            System.out.println("inserisci un numero");
+            System.out.println(mess);
             try {
                 numFloat = Float.parseFloat(tastiera.readLine());
                 if (numFloat < min || numFloat > max) throw new ValoreNonRange("inserire un numero tra " + min + "e" + max);
@@ -64,7 +64,7 @@ public class Tastiera {
         boolean errore;
         do {
             errore = false;
-            System.out.println("inserisci un numero");
+            System.out.println(mess);
             try {
                 num = Double.parseDouble(tastiera.readLine());
                 if (num < min || num > max) throw new ValoreNonRange("inserire un numero tra " + min + "e" + max);
@@ -76,6 +76,24 @@ public class Tastiera {
             }
         }while (!errore);
         return num;
+    }
+
+    public static String readString(String mess){
+        String app = null;
+
+        boolean errore;
+        do {
+            errore = false;
+            System.out.println(mess);
+            try {
+                app = tastiera.readLine();
+                errore = true;
+            } catch (IOException e) {
+                System.out.printf("errore di IO");
+            }
+        }while (!errore);
+
+        return app;
     }
     
 }

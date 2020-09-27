@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.GregorianCalendar;
 
 public class Prodotto {
@@ -14,12 +15,13 @@ public class Prodotto {
     private float sconto=0;
     private String responsabile;
     private String telefono;
-    private GregorianCalendar scadenza=null;
+    private java.time.LocalDate scadenza;
 
     public Prodotto(String produttore, Enum reparto, Enum categoria,
                     String scaffale, String nomeProdotto, double quantita,
                     long codiceProdotto, Enum unitaMisura, float prezzo, String taglia,
-                    float sconto, String responsabile, String telefono, GregorianCalendar scadenza) {
+                    float sconto, String responsabile, String telefono,
+                    java.time.LocalDate scadenza) {
         this.produttore = produttore;
         this.reparto = reparto;
         this.categoria = categoria;
@@ -88,8 +90,60 @@ public class Prodotto {
         return telefono;
     }
 
-    public GregorianCalendar getScadenza() {
-        return scadenza;
+    public void setProduttore(String produttore) {
+        this.produttore = produttore;
+    }
+
+    public void setReparto(Enum reparto) {
+        this.reparto = reparto;
+    }
+
+    public void setCategoria(Enum categoria) {
+        this.categoria = categoria;
+    }
+
+    public void setScaffale(String scaffale) {
+        this.scaffale = scaffale;
+    }
+
+    public void setNomeProdotto(String nomeProdotto) {
+        this.nomeProdotto = nomeProdotto;
+    }
+
+    public void setQuantita(double quantita) {
+        this.quantita = quantita;
+    }
+
+    public void setCodiceProdotto(long codiceProdotto) {
+        this.codiceProdotto = codiceProdotto;
+    }
+
+    public void setUnitaMisura(Enum unitaMisura) {
+        this.unitaMisura = unitaMisura;
+    }
+
+    public void setPrezzo(float prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public void setTaglia(String taglia) {
+        this.taglia = taglia;
+    }
+
+    public void setSconto(float sconto) {
+        this.sconto = sconto;
+    }
+
+    public void setResponsabile(String responsabile) {
+        this.responsabile = responsabile;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public void setScadenza(LocalDate scadenza) {
+        this.scadenza = scadenza;
     }
 
     public String toStringSave() {

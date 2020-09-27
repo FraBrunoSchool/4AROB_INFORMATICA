@@ -1,6 +1,7 @@
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.GregorianCalendar;
 import java.util.Vector;
 
@@ -14,113 +15,82 @@ public class CSVParser {
     public Vector<Prodotto> readCSV() throws IOException {
         String row;
         int k = 0;
-        Vector<Prodotto> prodotti;
-        prodotti = new Vector<Prodotto>();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        GregorianCalendar gregorianCalendar = null;
+        Vector<Prodotto> prodotti = new Vector<Prodotto>();
 
+        BufferedReader csvReader = null;
 
-        BufferedReader csvReader = new BufferedReader(new FileReader(fileName));
-        while ((row = csvReader.readLine()) != null) {
-            String[] data = row.split(",");
-
-            if (k == 0){
-                k++;
-            }else{
-                try {
-                    gregorianCalendar.setTime(simpleDateFormat.parse(data[13]));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                prodotti.add(new Prodotto(data[4],
-                        Reparto.valueOf(data[0]),
-                        Categoria.valueOf(data[1]),
-                        data[2],
+        try {
+            // prova apertura file
+            csvReader = new BufferedReader(new FileReader(this.fileName));
+            while ((row = csvReader.readLine()) != null) {
+                String[] data = row.split(",");
+                String[] scadenza = data[13].split("-");
+                prodotti.add(new Prodotto(data[0],
+                        Reparto.valueOf(data[1].toUpperCase()),
+                        Categoria.valueOf(data[2].toUpperCase()),
                         data[3],
-                        Double.parseDouble(data[6]),
-                        Long.parseLong(data[5]),
-                        UnitaMisura.valueOf(data[7]),
+                        data[4],
+                        Double.parseDouble(data[5]),
+                        Long.parseLong(data[6]),
+                        UnitaMisura.valueOf(data[7].toUpperCase()),
                         Float.parseFloat(data[8]),
                         data[9],
                         Float.parseFloat(data[10]),
                         data[11],
                         data[12],
-                        gregorianCalendar
+                        LocalDate.of(Integer.parseInt(scadenza[0]), Integer.parseInt(scadenza[1]), Integer.parseInt(scadenza[2]))
                 ));
             }
-
-
+            System.out.println("Operazione di salvataggio eseguita con successo.");
+        } catch (IOException e){ // IOException -> classe madre della classe FileNotFoundException
+            System.out.println("File non trovato\n");
+            e.printStackTrace();
+        } finally {
+            try {
+                if (csvReader != null) csvReader.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
-        csvReader.close();
         return prodotti;
     }
 
     public void writeCSV(Vector <String> values, String fileName){
-        FileWriter csvWriter = null;
-        try {
-            csvWriter = new FileWriter(fileName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        File file = null;
+        FileWriter fileWriter = null;
+        BufferedWriter writer = null;
 
-        for (String value : values){
-            try {
-                csvWriter.append(value);
-            } catch (IOException e) {
-                e.printStackTrace();
+        try {
+            file = new File(fileName);
+            fileWriter = new FileWriter(file);
+            if (!file.exists()) file.createNewFile();
+            writer = new BufferedWriter(fileWriter);
+            for (String value : values){
+                try {
+                    writer.write(value+"\n");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println("Operazione di caricamento eseguita con successo.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (fileWriter != null) {
+                try {
+                    fileWriter.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
-
-        try {
-            csvWriter.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            csvWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void editPrice(long productCode, float newPrice) throws IOException {
-
-        int k = 0;
-        String[] temp = null;
-        String[] data_split;
-        String data_attached;
-        String row;
-
-        BufferedReader csvReader = new BufferedReader(new FileReader(fileName));
-        while ((row = csvReader.readLine()) != null) {
-            data_split = row.split(",");
-            data_attached = "";
-
-            if(data_split[5].equals("" + productCode)){
-                data_split[8] = newPrice + "";
-            }
-            for(String data : data_split){
-                data_attached = data_attached + data + ",";
-            }
-
-            temp[k] = data_attached;
-
-            k++;
-        }
-
-        csvReader.close();
-
-        FileWriter csvWriter = null;
-        try {
-            csvWriter = new FileWriter(fileName,false);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        for(String line : temp){
-            csvWriter.write(line);
-        }
-        csvWriter.close();
 
     }
 

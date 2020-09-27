@@ -45,15 +45,21 @@ public class Supermercato {
         return null; // se non esiste
     }
 
-    public void deleteProdotto(Prodotto prodotto){
-        if(ricercaProdotto(prodotto.getCodiceProdotto())!=null && ricercaProdotto(prodotto.getNomeProdotto())!=null){
-            prodotti.removeElement(prodotto);
+    public void deleteProdotto(long codice){
+        for (int i = 0; i < prodotti.size(); i++) {
+            Prodotto p = prodotti.get(i);
+            if (p.getCodiceProdotto()==codice){
+                prodotti.removeElementAt(i);
+            }
         }
     }
 
-    public void updateProdotto(Prodotto prodotto){
-        if(ricercaProdotto(prodotto.getCodiceProdotto())!=null && ricercaProdotto(prodotto.getNomeProdotto())!=null){
-            prodotti.removeElement(prodotto);
+    public void updateProdotto(long codice, Prodotto prodotto){
+        for (int i = 0; i < prodotti.size(); i++) {
+            Prodotto p = prodotti.get(i);
+            if (p.getCodiceProdotto()==codice){
+                prodotti.set(i, prodotto);
+            }
         }
     }
 
@@ -61,7 +67,7 @@ public class Supermercato {
         Vector <Prodotto> prodottiRep = new Vector<Prodotto>();
         int cont = 0;
         while(cont<prodotti.size()){
-            if(String.valueOf(prodotti.get(cont).getReparto()).equals(reparto)){
+            if((String.valueOf(prodotti.get(cont).getReparto()).toUpperCase()).equals(reparto.toUpperCase())){
                 prodottiRep.add(prodotti.get(cont));
             }
             cont++;
@@ -72,7 +78,7 @@ public class Supermercato {
     public String telefonoResponsabile(String reparto){
         int cont = 0;
         while(cont<prodotti.size()){
-            if(String.valueOf(prodotti.get(cont).getReparto()).equals(reparto)){
+            if((String.valueOf(prodotti.get(cont).getReparto()).toUpperCase()).equals(reparto.toUpperCase())){
                 return "Responsabile: " + prodotti.get(cont).getResponsabile() + " Numero: " + prodotti.get(cont).getTelefono();
             }
             cont++;
@@ -86,5 +92,15 @@ public class Supermercato {
             save.add(p.toStringSave());
         }
         c.writeCSV(save, fileName);
+    }
+    @Override
+    public String toString() {
+        String print = "";
+        for (Prodotto p : prodotti) print += p.toStringSave() + "\n";
+        return "Supermercato{" +
+                "prodotti=" + print +
+                ", nome='" + nome + '\'' +
+                ", nomeArchivio='" + nomeArchivio + '\'' +
+                '}';
     }
 }
