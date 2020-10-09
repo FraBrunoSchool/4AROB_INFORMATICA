@@ -11,7 +11,7 @@ public class Menu {
             menuGrafico();
             int n= 0;
             try {
-                n = Tastiera.leggiIntero("Inserisci numero per sceglire l'opzione del menù", 0, 8);
+                n = Tastiera.leggiIntero("Inserisci numero per sceglire l'opzione del menù", 0, 9);
             } catch (ValoreNonRange valoreNonRange) {
                 valoreNonRange.printStackTrace();
             }
